@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        .row{
+            display:flex;
+        }
+
+        /* Set additional styling options for the columns */
+        .column {
+            /* float: left; */
+            flex: 33%;
+            padding: 30px;
+        }
+    
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .verticallyCenter {
+            float: left;
+            position: relative;
+            box-sizing: border-box;
+            top:10px; /* (li height - img height) / 2 */
+            width:100px;/* img height + img padding-right */
+            height:90px;
+            padding-right:10px;
+        }
+
+        .track {
+            height:110px;
+            font-size:21px;
+            list-style-position:outside;
+            vertical-align: middle;
+        }
+
+        .track-text {
+            font-size:18px;
+            height:110px;
+            vertical-align:middle;
+            display:table-cell;
+        }
+
+        .artist {
+            vertical-align: middle;
+            line-height: 110px;
+            font-size:21px;
+        }
+
+    </style>
+    <title>Spotify Statistics</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://sp-bootstrap.global.ssl.fastly.net/8.0.0/sp-bootstrap.min.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="./spotify_script.js" defer></script>
+  </head>
+  <body class="container">
+    <h1 class="text-salmon">Spotify Statistics</h1>
+    <h2>Here are your top artists on Spotify:</h2>
+    <div class="row">
+        <div id="short_term" class="column" style="background-color:#FFB695; display:table-cell">
+            <h3>Short term (4 weeks)</h3>
+            <ol id="top-artists-short"></ol>
+        </div>
+        <div class="column" style="background-color:#96D1CD;">
+            <h3>Medium term (6 months)</h3>
+            <ol id="top-artists-medium"></ol>
+        </div>
+        <div class="column" style="background-color:#74C3E1;">
+            <h3>Long term (several years)</h3>
+            <ol id="top-artists-long"></ol>
+        </div>
+    </div>
+    <br/>
+    <h2>Here are your top tracks on Spotify:</h2>
+    <div class="row">
+        <div id="short_term" class="column" style="background-color:#FFB695; display:table-cell">
+            <h3>Short term (4 weeks)</h3>
+            <ol id="top-tracks-short"></ol>
+        </div>
+        <div class="column" style="background-color:#96D1CD;">
+            <h3>Medium term (6 months)</h3>
+            <ol id="top-tracks-medium"></ol>
+        </div>
+        <div class="column" style="background-color:#74C3E1;">
+            <h3>Long term (several years)</h3>
+            <ol id="top-tracks-long"></ol>
+        </div>
+    </div>
+  </body>
+</html>
