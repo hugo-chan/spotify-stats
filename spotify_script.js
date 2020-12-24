@@ -19,7 +19,7 @@ const authEndpoint = 'https://accounts.spotify.com/authorize';
 
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = '2e6af109c2a84f79a78284b4021b49b0';
-const redirectUri = 'https://hugo-chan.github.io/index.html';
+const redirectUri = 'https://hugo-chan.github.io';
 // const redirectUri = 'http://localhost:8000';
 const scopes = [
     'user-top-read'
@@ -65,63 +65,3 @@ top_info_call("artists", "long")
 top_info_call("tracks", "short")
 top_info_call("tracks", "medium")
 top_info_call("tracks", "long")
-// top_info_call("artists", "short")
-
-// // Make a call using the token
-// $.ajax({
-//    url: "https://api.spotify.com/v1/me/top/tracks",
-//    type: "GET",
-//    data: {
-//        limit: 50,
-//        offset: 0,
-//        time_range: "short_term"
-//    },
-//    beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
-//    success: function(data) { 
-//      // Do something with the returned data
-//      data.items.map(function(track) {
-//         console.log(track)
-//         let item = $(`<li class="track"> <img class="verticallyCenter" src=${track.album.images[0].url}> <span class="track-text">${track.artists[0].name} <br/> ${track.name}</span> </li>`);
-//         item.appendTo($('#top-tracks-short'));
-//      });
-//    }
-// });
-// //  <img class="verticallyCenter" src=${track.album.images[0].url}>
-
-// // $.ajax({
-// //    url: "https://api.spotify.com/v1/me/top/artists",
-// //    type: "GET",
-// //    data: {
-// //        limit: 50,
-// //        offset: 0,
-// //        time_range: "medium_term"
-// //    },
-// //    beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
-// //    success: function(data) { 
-// //      // Do something with the returned data
-// //      data.items.map(function(artist) {
-// //         let item = $(`<li> <img class="verticallyCenter" src=${artist.images[0].url}> ${artist.name} </li>`);
-// //        item.appendTo($('#top-artists-medium'));
-// //      });
-// //    }
-// // });
-
-// // // Make a call using the token
-// // $.ajax({
-// //    url: "https://api.spotify.com/v1/me/top/artists",
-// //    type: "GET",
-// //    data: {
-// //        limit: 50,
-// //        offset: 0,
-// //        time_range: "long_term"
-// //    },
-// //    beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
-// //    success: function(data) { 
-// //      // Do something with the returned data
-// //      data.items.map(function(artist) {
-// //         let item = $(`<li> <img class="verticallyCenter" src=${artist.images[0].url}> ${artist.name} </li>`);
-// //        item.appendTo($('#top-artists-long'));
-// //      });
-// //    }
-// // });
-
