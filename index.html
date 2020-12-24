@@ -3,18 +3,11 @@
   <head>
     <style>
       body {
-        min-width:1200px;        /* Suppose you want minimum width of 1000px */
+        min-width:1200px;
       }
 
       .row{
         display:flex;
-      }
-
-      /* Set additional styling options for the columns */
-      .column {
-        /* float: left; */
-        flex: 33%;
-        padding: 30px;
       }
 
       .row:after {
@@ -22,6 +15,12 @@
         display: table;
         clear: both;
       }
+
+      .column {
+        flex: 33%;
+        padding: 30px;
+      }
+
 
       .verticallyCenter {
         float: left;

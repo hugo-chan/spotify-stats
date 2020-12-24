@@ -49,7 +49,6 @@ const top_info_call = function(endpoint, time_range) {
           let item = $(`<li class="track"> <img class="verticallyCenter" src=${track.album.images[0].url}> <span class="track-text">${track.name}<br/><span style="font-size:16px">${track.artists[0].name}</span></span> </li>`);
           item.appendTo($(`#top-${endpoint}-${time_range}`));
         }
-
       });
     }
   });
