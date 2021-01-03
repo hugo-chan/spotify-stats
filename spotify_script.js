@@ -18,7 +18,7 @@ let _token = hash.access_token;
 
 const authEndpoint = 'https://accounts.spotify.com/authorize';
 const clientId = '2e6af109c2a84f79a78284b4021b49b0';
-const redirectUri = 'https://hugo-chan.github.io';
+const redirectUri = window.location.href;
 // const redirectUri = 'http://localhost:8000';
 const scopes = ['user-top-read'];
 
